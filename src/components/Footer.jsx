@@ -30,7 +30,7 @@ export default function Footer() {
           حقوق الطبع &copy; وهمي برجر 2025
         </div>
 
-        {/* 🔥 الجزء الجديد */}
+        {/*  الجزء الجديد */}
         <div className="developer mt-2">
           Created by{" "}
           <a
