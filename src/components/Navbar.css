@@ -1,0 +1,349 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== NAVBAR BASE ========== */
+.navbar {
+  font-family: 'Cairo', sans-serif;
+  transition: all 0.4s ease-in-out;
+  padding: 1rem 0;
+  background: transparent !important;
+  box-shadow: none;
+  direction: rtl;
+}
+
+/* ========== بعد السكرول ========== */
+.navbar.nav-scroll {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== LOGO مع أنيميشن الدوران ========== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img:first-child {
+  width: 45px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  animation: logoRotateIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes logoRotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.navbar-brand img:last-child {
+  width: 85px;
+  animation: slideRotateIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes slideRotateIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) rotate(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.navbar-brand:hover img:first-child {
+  animation: logoHoverRotate 0.5s ease-in-out;
+}
+
+@keyframes logoHoverRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========== NAV LINKS ========== */
+.navbar-nav {
+  gap: 0.25rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.3rem !important;
+  border-radius: 40px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: white !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  color: white !important;
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 35px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd89b, #ff6b6b);
+  border-radius: 3px;
+  animation: underlinePulse 1.5s infinite;
+}
+
+@keyframes underlinePulse {
+  0%, 100% {
+    width: 35px;
+    opacity: 0.7;
+  }
+  50% {
+    width: 55px;
+    opacity: 1;
+  }
+}
+
+.nav-link:not(.active)::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd89b, #ffb347);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:not(.active):hover::before {
+  width: 60%;
+}
+
+/* ========== TOGGLER BUTTON ========== */
+.navbar-toggler {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 0.8rem;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler i {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.navbar-toggler:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+/* ========== زر السلة ========== */
+.cart-icon-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 8px 14px;
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.cart-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff6b6b;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 50%;
+  animation: badgePop 0.3s ease;
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ========== شريط التقدم ========== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+  z-index: 9999;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 10px #ff6b6b;
+}
+
+/* ========== تعويض الناف بار الثابت ========== */
+body {
+  padding-top: 0;
+  margin: 0;
+}
+
+/* الهيرو سكشن ميكونش ليه padding-top */
+.carousel {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* كل السكشنات التانية تبدأ من تحت الناف بار */
+.cats,
+.offers-section,
+.delivery,
+.api-section,
+footer,
+.menu-layout,
+.about-page,
+.contact-page {
+  padding-top: 80px;
+}
+
+/* صفحة المنيو */
+.main-menu {
+  padding-top: 100px;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 991px) {
+  .navbar {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+    padding: 0.8rem 0;
+  }
+  
+  .navbar.nav-scroll {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+  }
+  
+  .navbar-collapse {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 24px;
+    margin-top: 1rem;
+    padding: 1.5rem 1rem;
+    animation: mobileMenuSlide 0.4s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  @keyframes mobileMenuSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-item {
+    margin: 0.3rem 0;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    width: auto;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem;
+  }
+  
+  .nav-link.active::after {
+    bottom: -5px;
+  }
+  
+  .navbar-brand img:first-child {
+    width: 38px;
+  }
+  
+  .navbar-brand img:last-child {
+    width: 70px;
+  }
+  
+  /* تقليل padding في الموبايل */
+  .cats,
+  .offers-section,
+  .delivery,
+  .api-section,
+  footer {
+    padding-top: 60px;
+  }
+  
+  .main-menu {
+    padding-top: 80px;
+  }
+}
+
+/* ========== DESKTOP ========== */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 1.2rem 0;
+  }
+  
+  .navbar.nav-scroll {
+    padding: 0.6rem 0 !important;
+  }
+}
+
+/* ========== RTL Fix ========== */
+.navbar-nav {
+  margin-right: auto;
+  margin-left: 0 !important;
+}

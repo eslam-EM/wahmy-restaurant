@@ -1,0 +1,304 @@
+.about-hero {
+  position: relative;
+  height: 65vh;
+  background: url('../assets/aboutPage.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+
+.about-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero-content p {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  opacity: 0.8;
+}
+
+.hero-line {
+  width: 60px;
+  height: 2px;
+  background: white;
+  margin: 20px auto 0;
+}
+
+/* ========== GENERAL ========== */
+.about-page {
+  background: #0a0a0a;
+  color: #e8e8e8;
+  direction: rtl;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.about-section {
+  padding: 80px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.about-section:last-child {
+  border-bottom: none;
+}
+
+/* ========== LINE ========== */
+.about-line {
+  width: 50px;
+  height: 2px;
+  background: #c0392b;
+  margin: 15px 0 25px;
+}
+
+.about-line.center {
+  margin: 15px auto 30px;
+}
+
+/* ========== TEXT SECTION ========== */
+.about-text h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #b0b0b0;
+  margin-bottom: 1.2rem;
+}
+
+.about-text strong {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.about-image {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.4s ease;
+  filter: grayscale(0%);
+}
+
+.about-image:hover img {
+  opacity: 0.9;
+}
+
+/* ========== PHILOSOPHY CARDS ========== */
+.philosophy-card {
+  background: #111111;
+  padding: 40px 30px;
+  border-left: 3px solid #c0392b;
+  transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+  background: #151515;
+  transform: translateY(-4px);
+}
+
+.philosophy-card h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.philosophy-card p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* ========== VALUES SECTION ========== */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.value-item {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.value-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #c0392b;
+  margin-bottom: 0.8rem;
+}
+
+.value-item p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #888888;
+  margin: 0;
+}
+
+/* ========== NUMBERS SECTION ========== */
+.numbers-section {
+  background: #0d0d0d;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.number-card {
+  padding: 20px;
+}
+
+.number-card h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.number-card p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #777777;
+  margin: 0;
+}
+
+/* ========== QUOTE SECTION ========== */
+.quote-section {
+  padding: 60px 0;
+}
+
+.quote-box {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #dddddd;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+
+.quote-author {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #c0392b;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .philosophy-card {
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .about-line {
+    margin: 15px auto 25px;
+  }
+  
+  .about-text h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+  }
+  
+  .about-hero-content p {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .value-item {
+    padding: 15px;
+  }
+  
+  .quote-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .number-card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    height: 40vh;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .philosophy-card {
+    padding: 25px 20px;
+  }
+  
+  .value-item h4 {
+    font-size: 0.9rem;
+  }
+  
+  .number-card h2 {
+    font-size: 1.5rem;
+  }
+}

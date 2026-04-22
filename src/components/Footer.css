@@ -1,0 +1,14 @@
+.footer{
+    background-color: rgba(255, 0, 0, 0.797);
+    font-family: "Changa", sans-serif;
+}
+
+.footer-links a{
+    text-decoration: none;
+}
+
+.vr-line{
+    width: 1px;
+    height: 20px;
+    background-color: white;
+}

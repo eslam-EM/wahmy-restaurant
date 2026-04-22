@@ -1,0 +1,29 @@
+.delivery{
+  font-family: "Changa", sans-serif;
+}
+
+.animator i{
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    color: #4f4e4a;
+}
+
+.animator{
+  position: absolute;
+  animation-name: animi;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  width: 450px;
+}
+
+@keyframes animi{
+  0%{
+    top: 5%;
+  }
+  100%{
+    top: 20%;
+  }
+}
