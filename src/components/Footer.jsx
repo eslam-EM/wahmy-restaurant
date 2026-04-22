@@ -8,12 +8,14 @@ export default function Footer() {
   return (
     <div className='footer text-center py-4'>
       <div className="container">
+
         <div className='footer-logo'>
           <NavLink className="navbar-brand" to='/'>
             <img src={logo} width={50} />
             <img src={wahmyBrand} width={90} />
           </NavLink>
         </div>
+
         <div className="footer-links d-flex align-items-center gap-3 justify-content-center mt-3">
           <NavLink className='text-light' to='/contact'>
             اتصل بنا
@@ -23,9 +25,23 @@ export default function Footer() {
             من نحن
           </NavLink>
         </div>
+
         <div className='copyrights text-light mt-3'>
           حقوق الطبع &copy; وهمي برجر 2025
         </div>
+
+        {/* 🔥 الجزء الجديد */}
+        <div className="developer mt-2">
+          Created by{" "}
+          <a
+            href="https://your-portfolio-link.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Eslam Mohamed
+          </a>
+        </div>
+
       </div>
     </div>
   )

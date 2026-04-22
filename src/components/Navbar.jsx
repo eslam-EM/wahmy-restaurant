@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const { getTotalItems } = useCart();
 
-  // 🔹 قفل المينيو
+  //  قفل المينيو
   const closeMenu = () => {
     setIsMenuOpen(false);
     const collapseElement = document.getElementById('navbarSupportedContent');
@@ -27,12 +27,12 @@ export default function Navbar() {
     }
   };
 
-  // 🔹 فتح / قفل
+  //  فتح / قفل
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // 🔹 اسكرول
+  //  اسكرول
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY >= 50);
@@ -51,31 +51,31 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 🔥 Progress */}
+      {/*  Progress */}
       <div
         className="scroll-progress"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
-      {/* 🔥 Navbar */}
+      {/*  Navbar */}
       <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'nav-scroll' : ''}`}>
         <div className="container">
 
-          {/* 🔥 Logo */}
+          {/*  Logo */}
           <NavLink className="navbar-brand" to="/" onClick={closeMenu}>
             <img src={logo} alt="logo" />
             <img src={wahmyBrand} alt="brand" />
           </NavLink>
 
-          {/* 🔥 Toggle */}
+          {/*  Toggle (FIXED) */}
           <button
-            className={`navbar-toggler ${isMenuOpen ? 'collapsed' : ''}`}
+            className="navbar-toggler custom-toggler"
             onClick={toggleMenu}
           >
-            <i className="fas fa-bars"></i>
+            {isMenuOpen ? "✕" : "☰"}
           </button>
 
-          {/* 🔥 Menu */}
+          {/*  Menu */}
           <div
             className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}
             id="navbarSupportedContent"
@@ -108,7 +108,7 @@ export default function Navbar() {
 
             </ul>
 
-            {/* 🔥 Cart */}
+            {/*  Cart */}
             <button
               className="cart-icon-btn"
               onClick={() => {
@@ -126,7 +126,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* 🔥 IMPORTANT: يظهروا مرة واحدة بس */}
+      {/*  IMPORTANT */}
       <CartSidebar isOpen={cartOpen} onClose={() => setCartOpen(false)} />
       <OrderConfirmModal />
       <ToastMessage />

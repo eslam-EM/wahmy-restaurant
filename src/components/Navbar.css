@@ -347,3 +347,62 @@ footer,
   margin-right: auto;
   margin-left: 0 !important;
 }
+
+
+
+
+
+
+.custom-toggler {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+/*  في الموبايل بس */
+@media (max-width: 991px) {
+  .custom-toggler {
+    background: #e74c3c;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+
+  .custom-toggler:hover {
+    background: #c0392b;
+  }
+}
+
+
+/*  توحيد شكل زرار السلة مع اللينكات في الموبايل */
+@media (max-width: 991px) {
+
+  .cart-icon-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    
+    font-size: 1rem;
+    font-weight: 600;
+
+    padding: 0.8rem 1.5rem;
+    border-radius: 40px;
+
+    margin-top: 10px;
+    margin-right: 0;
+
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .cart-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: none;
+  }
+
+  /*  يخليه في النص زي الباقي */
+  .navbar-nav {
+    text-align: center;
+  }
+
+}
