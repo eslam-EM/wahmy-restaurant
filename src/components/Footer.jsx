@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="developer mt-2">
           Created by{" "}
           <a
-            href="https://your-portfolio-link.com"
+            href="https://portfolio-sigma-pink-42.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
