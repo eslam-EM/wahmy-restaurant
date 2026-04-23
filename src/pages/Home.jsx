@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 import Carousel from '../components/Carousel'
 import Categories from '../components/Categories'
 import Delivery from '../components/Delivery'
-import Api from '../components/Api'
 import Offers from '../components/Offers' 
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <Categories />
       <Offers />        
       <Delivery />
-      <Api />
     </div>
   )
 }
